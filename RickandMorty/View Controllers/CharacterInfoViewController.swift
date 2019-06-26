@@ -16,7 +16,7 @@ class CharacterInfoViewController: UIViewController {
     @IBOutlet weak var characterSpeciesLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        characterSearchBar.delegate = self
         //CharacterController.sharedInstance.fetchCharacterWith(searchTerm: "2") { (success) in
             
         
