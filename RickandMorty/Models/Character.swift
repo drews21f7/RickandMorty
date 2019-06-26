@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Characters: Decodable {
+struct RMcharacter: Decodable {
     let id: Int
     let name: String
     let species: String

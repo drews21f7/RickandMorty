@@ -12,6 +12,7 @@
 		3A02C9E122C3D448002E25E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A02C9E022C3D448002E25E1 /* Assets.xcassets */; };
 		3A02C9E422C3D448002E25E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A02C9E222C3D448002E25E1 /* LaunchScreen.storyboard */; };
 		3A02C9EE22C3D77D002E25E1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02C9ED22C3D77D002E25E1 /* Character.swift */; };
+		3A02C9F122C3D934002E25E1 /* CharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02C9F022C3D934002E25E1 /* CharacterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3A02C9E322C3D448002E25E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A02C9E522C3D448002E25E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A02C9ED22C3D77D002E25E1 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		3A02C9F022C3D934002E25E1 /* CharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				3A02C9EB22C3D5D1002E25E1 /* Resources */,
 				3A02C9EC22C3D5DB002E25E1 /* Views */,
 				3A02C9EF22C3D780002E25E1 /* Models */,
+				3A02C9F222C3D948002E25E1 /* Model Controllers */,
 			);
 			path = RickandMorty;
 			sourceTree = "<group>";
@@ -86,6 +89,14 @@
 				3A02C9ED22C3D77D002E25E1 /* Character.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3A02C9F222C3D948002E25E1 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A02C9F022C3D934002E25E1 /* CharacterController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A02C9DA22C3D448002E25E1 /* AppDelegate.swift in Sources */,
+				3A02C9F122C3D934002E25E1 /* CharacterController.swift in Sources */,
 				3A02C9EE22C3D77D002E25E1 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
