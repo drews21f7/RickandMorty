@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Character Info View Controller-->
         <scene sceneID="cfB-wg-7EO">
             <objects>
-                <viewController id="2mT-gc-57h" sceneMemberID="viewController">
+                <viewController id="2mT-gc-57h" customClass="CharacterInfoViewController" customModule="RickandMorty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GEC-OR-NwI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +55,9 @@
                                 <state key="normal" title="Are they still alive?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="isAliveButtonTapped:" destination="2mT-gc-57h" eventType="touchUpInside" id="6NS-W8-0V2"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Species:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2Y-Pa-L85">
                                 <rect key="frame" x="40" y="634" width="75" height="24"/>
@@ -68,6 +71,12 @@
                         <viewLayoutGuide key="safeArea" id="dOp-8e-57c"/>
                     </view>
                     <navigationItem key="navigationItem" id="fz9-Ud-OnR"/>
+                    <connections>
+                        <outlet property="characterImage" destination="tJH-13-ihj" id="yvm-g7-vUx"/>
+                        <outlet property="characterNameLabel" destination="h6c-Gg-mNq" id="k7Z-vn-s1n"/>
+                        <outlet property="characterSearchBar" destination="UPE-Nn-cOD" id="Wbj-mO-P6C"/>
+                        <outlet property="characterSpeciesLabel" destination="3TM-vK-dop" id="jaU-mL-jqL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLe-Yj-zzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
