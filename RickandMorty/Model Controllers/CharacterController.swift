@@ -40,10 +40,19 @@ class CharacterController {
         }.resume()
     }
     
-//    func fetchCharacterImage(character: RMcharacter, completion: @escaping (UIImage?) -> Void) {
-//
-//        let imageURL = URL(string: "https://rickandmortyapi.com/api/character/avatar/")
-//
-//        let imagePathComponentURL = imageURL?.appendingPathComponent(RMcharacter.image)
-//    }
+    func fetchCharacterImage(character: RMcharacter, completion: @escaping (UIImage?) -> Void) {
+
+        let imageURL = character.image//(string: "https://rickandmortyapi.com/api/character/avatar/")
+        
+        URLSession.shared.dataTask(with: imageURL) { (data, _, error) in
+            if let error = error {
+                print("Error on image \(error.localizedDescription)")
+            }
+            if let data = data {
+                guard let characterImage = UIImage(data: data) else {completion(nil); return}
+                completion(characterImage)
+            }
+        }.resume()
+        //let imagePathComponentURL = imageURL?.appendingPathComponent(character.image)
+    }
 }
