@@ -28,3 +28,7 @@ struct RMcharacter: Decodable {
 }
 
 
+struct TopLevelDictionary: Decodable {
+    
+    let results: [RMcharacter]
+}

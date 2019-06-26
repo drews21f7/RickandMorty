@@ -17,11 +17,13 @@ class CharacterController {
     
     func fetchCharacterWith(searchTerm: String, completion: @escaping(RMcharacter?) -> Void) {
         
-        let baseURL = URL(string: "https://rickandmortyapi.com/api/")
+        guard let baseURL = URL(string: "https://rickandmortyapi.com/api/character/") else {completion(nil); return}
         
-        let characterPathComponentURL = baseURL?.appendingPathComponent("character")
+        var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         
-        guard let finalURL = characterPathComponentURL?.appendingPathComponent(searchTerm) else {return}
+        let nameQuery = URLQueryItem(name: "name", value: searchTerm)
+        components?.queryItems = [nameQuery]
+        guard let finalURL = components?.url else {completion(nil); return}
         print(finalURL)
         
         URLSession.shared.dataTask(with: finalURL) { (data, _, error) in
@@ -33,11 +35,13 @@ class CharacterController {
                 
                 do {
                     
-                    let character = try  JSONDecoder().decode(RMcharacter.self, from: data)
+                    let characters = try  JSONDecoder().decode(TopLevelDictionary.self, from: data)
+                    let character = characters.results[0]
                     self.characterSelect = character
                     completion(character)
+                    
                 } catch {
-                    print("Error Fetching character!")
+                    print("Error Fetching character! \(error) \(error.localizedDescription)")
                     completion(nil); return
                 }
             }
