@@ -12,6 +12,8 @@ class CharacterController {
     
     static let sharedInstance = CharacterController()
     
+    var characterSelect: RMcharacter?
+    
     func fetchCharacterWith(searchTerm: String, completion: @escaping(RMcharacter?) -> Void) {
         
         let baseURL = URL(string: "https://rickandmortyapi.com/api/")
@@ -31,6 +33,7 @@ class CharacterController {
                 do {
                     
                     let character = try  JSONDecoder().decode(RMcharacter.self, from: data)
+                    self.characterSelect = character
                     completion(character)
                 } catch {
                     print("Error Fetching character!")
@@ -42,7 +45,7 @@ class CharacterController {
     
     func fetchCharacterImage(character: RMcharacter, completion: @escaping (UIImage?) -> Void) {
 
-        let imageURL = character.image//(string: "https://rickandmortyapi.com/api/character/avatar/")
+        let imageURL = character.image
         
         URLSession.shared.dataTask(with: imageURL) { (data, _, error) in
             if let error = error {

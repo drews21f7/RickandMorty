@@ -14,6 +14,7 @@
 		3A02C9EE22C3D77D002E25E1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02C9ED22C3D77D002E25E1 /* Character.swift */; };
 		3A02C9F122C3D934002E25E1 /* CharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02C9F022C3D934002E25E1 /* CharacterController.swift */; };
 		3A02C9F422C3DFE5002E25E1 /* CharacterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02C9F322C3DFE5002E25E1 /* CharacterInfoViewController.swift */; };
+		3A02C9F722C400FE002E25E1 /* CharacterStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02C9F622C400FE002E25E1 /* CharacterStatusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3A02C9ED22C3D77D002E25E1 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		3A02C9F022C3D934002E25E1 /* CharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterController.swift; sourceTree = "<group>"; };
 		3A02C9F322C3DFE5002E25E1 /* CharacterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoViewController.swift; sourceTree = "<group>"; };
+		3A02C9F622C400FE002E25E1 /* CharacterStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterStatusViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3A02C9F322C3DFE5002E25E1 /* CharacterInfoViewController.swift */,
+				3A02C9F622C400FE002E25E1 /* CharacterStatusViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A02C9F722C400FE002E25E1 /* CharacterStatusViewController.swift in Sources */,
 				3A02C9F422C3DFE5002E25E1 /* CharacterInfoViewController.swift in Sources */,
 				3A02C9DA22C3D448002E25E1 /* AppDelegate.swift in Sources */,
 				3A02C9F122C3D934002E25E1 /* CharacterController.swift in Sources */,

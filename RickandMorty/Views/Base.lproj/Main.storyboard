@@ -57,6 +57,7 @@
                                 </state>
                                 <connections>
                                     <action selector="isAliveButtonTapped:" destination="2mT-gc-57h" eventType="touchUpInside" id="6NS-W8-0V2"/>
+                                    <segue destination="Xks-Xk-ddQ" kind="show" identifier="toCharacterStatus" id="6Xn-oG-rEH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Species:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2Y-Pa-L85">
@@ -82,20 +83,52 @@
             </objects>
             <point key="canvasLocation" x="757.97101449275374" y="18.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Character Status View Controller-->
         <scene sceneID="rGi-9F-G4N">
             <objects>
-                <viewController id="Xks-Xk-ddQ" sceneMemberID="viewController">
+                <viewController id="Xks-Xk-ddQ" customClass="CharacterStatusViewController" customModule="RickandMorty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bKy-pP-26F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHO-j5-nWs">
+                                <rect key="frame" x="55" y="231" width="304" height="308"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(character)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytn-aA-1MT">
+                                <rect key="frame" x="139" y="598" width="156" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(status)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICX-GU-iSa">
+                                <rect key="frame" x="139" y="726" width="156" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGi-Cu-inJ">
+                                <rect key="frame" x="201" y="653" width="15" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mCI-qe-YHz"/>
                     </view>
+                    <connections>
+                        <outlet property="characterImage" destination="pHO-j5-nWs" id="wc3-Z7-uV2"/>
+                        <outlet property="characterNameLabel" destination="ytn-aA-1MT" id="Ehq-zy-60u"/>
+                        <outlet property="characterStatusLabel" destination="ICX-GU-iSa" id="5YZ-tp-0gr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCa-XI-Cec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1623" y="19"/>
+            <point key="canvasLocation" x="1621.7391304347827" y="18.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Vb-lG-gON">
