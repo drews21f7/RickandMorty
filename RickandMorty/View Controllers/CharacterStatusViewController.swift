@@ -15,14 +15,26 @@ class CharacterStatusViewController: UIViewController {
     @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
     @IBOutlet weak var characterStatusLabel: UILabel!
+    @IBOutlet weak var backgroundView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         characterNameLabel.text = characterInfoLandingPad?.name
         characterStatusLabel.text = characterInfoLandingPad?.status
+        switch characterStatusLabel.text {
+        case "Alive":
+            backgroundView.backgroundColor = .cyan
+        case "Dead":
+            backgroundView.backgroundColor = .red
+        default:
+            backgroundView.backgroundColor = .orange
+            
+
+        }
         //characterImage.image = characterInfoLandingPad?.image
 
         // Do any additional setup after loading the view.
     }
+    
 
 }

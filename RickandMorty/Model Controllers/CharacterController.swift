@@ -14,6 +14,7 @@ class CharacterController {
     
     var characterSelect: RMcharacter?
     
+    
     func fetchCharacterWith(searchTerm: String, completion: @escaping(RMcharacter?) -> Void) {
         
         let baseURL = URL(string: "https://rickandmortyapi.com/api/")
