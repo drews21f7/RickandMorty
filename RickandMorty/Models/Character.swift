@@ -13,4 +13,7 @@ struct RMcharacter: Decodable {
     let name: String
     let species: String
     let status: Bool
+    let image: URL
 }
+
+

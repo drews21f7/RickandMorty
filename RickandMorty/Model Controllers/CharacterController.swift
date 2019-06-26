@@ -6,7 +6,7 @@
 //  Copyright © 2019 Drew Seeholzer. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class CharacterController {
     
@@ -20,5 +20,30 @@ class CharacterController {
         
         guard let finalURL = characterPathComponentURL?.appendingPathComponent(searchTerm) else {return}
         print(finalURL)
+        
+        URLSession.shared.dataTask(with: finalURL) { (data, _, error) in
+            if let error = error {
+                print ("There was an error \(error.localizedDescription)")
+            }
+            
+            if let data = data {
+                
+                do {
+                    
+                    let character = try  JSONDecoder().decode(RMcharacter.self, from: data)
+                    completion(character)
+                } catch {
+                    print("Error Fetching character!")
+                    completion(nil); return
+                }
+            }
+        }.resume()
     }
+    
+//    func fetchCharacterImage(character: RMcharacter, completion: @escaping (UIImage?) -> Void) {
+//
+//        let imageURL = URL(string: "https://rickandmortyapi.com/api/character/avatar/")
+//
+//        let imagePathComponentURL = imageURL?.appendingPathComponent(RMcharacter.image)
+//    }
 }
