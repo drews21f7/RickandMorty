@@ -46,7 +46,7 @@ class CharacterController {
     
     func fetchCharacterImage(character: RMcharacter, completion: @escaping (UIImage?) -> Void) {
 
-        let imageURL = character.image
+        let imageURL = character.imageURL
         
         URLSession.shared.dataTask(with: imageURL) { (data, _, error) in
             if let error = error {

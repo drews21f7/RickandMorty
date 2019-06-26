@@ -54,6 +54,7 @@ extension CharacterInfoViewController: UISearchBarDelegate {
             CharacterController.sharedInstance.fetchCharacterImage(character: character, completion: {
                 (image) in
                 DispatchQueue.main.async {
+                    CharacterController.sharedInstance.characterSelect?.image = image
                     self.characterImage.image = image
                 }
             })

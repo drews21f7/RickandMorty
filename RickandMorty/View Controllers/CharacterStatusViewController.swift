@@ -21,6 +21,7 @@ class CharacterStatusViewController: UIViewController {
         super.viewDidLoad()
         characterNameLabel.text = characterInfoLandingPad?.name
         characterStatusLabel.text = characterInfoLandingPad?.status
+        characterImage.image = characterInfoLandingPad?.image
         switch characterStatusLabel.text {
         case "Alive":
             backgroundView.backgroundColor = .cyan
@@ -31,7 +32,6 @@ class CharacterStatusViewController: UIViewController {
             
 
         }
-        //characterImage.image = characterInfoLandingPad?.image
 
         // Do any additional setup after loading the view.
     }
