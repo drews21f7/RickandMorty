@@ -47,6 +47,12 @@ extension CharacterInfoViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         CharacterController.sharedInstance.fetchCharacterWith(searchTerm: searchText) { (character) in
             guard let character = character else { return }
+            CharacterController.sharedInstance.fetchCharacterImage(character: character, completion: {
+                (image) in
+                DispatchQueue.main.async {
+                    self.characterImage.image = image
+                }
+            })
             self.updatesView(with: character)
         }
     }
